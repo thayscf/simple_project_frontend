@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mega Telecom</title>
+
+    <link rel="stylesheet" href="components/font-awesome/css/all.min.css">
+
+    <link rel="stylesheet" href="components/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header_top">
+        <ul class="nav justify-content-end container">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mega Telecom</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </li>
+        </ul>
+    </div>
+    <div class="header_menu">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-md navbar-light bg-faded container" role="navigation">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Mega Telecom Logo">
+            </a>
+
+            <button id="menuMobile" class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dContrato" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-file-alt"></i>
+                            <div>
+                                <p>Contrato</p>
+                                <span>9920042785</span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dContrato">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Minha Conta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Minhas Faturas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="section_user">
+        <div class="container">
+            <h5>Olá, Richard</h5>
+            <h1>Minha conta</h1>
+        </div>
+    </section>
+
+    <section id="section_dashboard" class="section_db">
+        <div class="container">
+            <div class="row">
+                <div class="section_db_item col-md-6 col-sm-12">
+                    <h2>plano contratado</h2>
+                    <form class="section_db_item_table">
+                        <div class="form-group">
+                            <label for="nomePlano">Plano Contratado</label>
+                            <input type="text" disabled class="form-control" id="nomePlano" placeholder="Plano de assinatura básico">
+                        </div>
+                        <div class="form-group">
+                            <label for="numeroContrato">Número do Contrato</label>
+                            <input type="text" disabled class="form-control" id="numeroContrato" placeholder="051784961">
+                        </div>
+                        <div class="form-group">
+                            <label for="cnpjPlano">CNPJ</label>
+                            <input type="text" disabled class="form-control" id="cnpjPlano" placeholder="154.895.591/0001-88">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailTecnico">Email address</label>
+                            <input type="text" disabled class="form-control" id="emailTecnico" placeholder="emailtecnico@email.com">
+                        </div>
+                    </form>
+                </div>
+                <div class="section_db_item col-md-6 col-sm-12">
+                    <h2>última fatura</h2>
+                    <div class="section_db_item_table">
+                        <h3 id="valorFatura">R$250,84</h3>
+                        <div class="row mb-3">
+                            <div class="form-group col-lg-4 col-md-12">
+                                <label for="vencFatura">Vencimento</label>
+                                <input type="text" disabled class="form-control" id="vencFatura" placeholder="15/10/2018">
+                            </div>
+                            <div class="form-group col-lg-4 col-md-12">
+                                <label for="situacaoFatura">Situação da Fatura</label>
+                                <input type="text" disabled class="form-control" id="situacaoFatura" placeholder="Paga">
+                            </div>
+                            <div class="form-group col-lg-4 col-md-12">
+                                <label for="formaPagamento">Pagamento</label>
+                                <input type="text" disabled class="form-control" id="formaPagamento" placeholder="Boleto">
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">baixar pdf</a>
+                        <a href="#" class="btn btn-secondary">visualizar histórico</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                © Copyright 2018 Mega Telecom - Versão 1.0
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <a href="#">termos de uso</a>
+                <a href="#">política de privacidade</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script src="js/main.js"></script>
+</html>

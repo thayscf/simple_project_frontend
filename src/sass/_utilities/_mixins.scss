@@ -1,0 +1,107 @@
+$breakpoints: (
+    "Extra-small":  575.98px,
+    "small":        767.98px,
+    "Medium ":      991.98px,
+    "Large":        1199.98px
+);
+@mixin mq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == min {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+/* Se por acaso você não tiver acostumado a usar o @content, um exemplo de uso:
+
+input,  
+textarea {  
+    @include input-placeholder {
+        color: $grey;
+    }
+} */
+
+//Font Montserrat
+@mixin font-mont($size: false, $weight: false) {
+    font-family: 'Montserrat', sans-serif;
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+}
+
+//Font Ubuntu
+@mixin font-ubun($size: false, $weight: false) {
+    font-family: 'Ubuntu', sans-serif;
+    @if $size { font-size: $size; }
+    @if $weight { font-weight: $weight; }
+}
+
+//Centralizar
+@mixin push--auto {
+    margin: { 
+    left: auto;
+    right: auto;
+    }
+}
+
+//Box-Sizing
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+        -moz-box-sizing: $box-model; // Firefox <= 19
+            box-sizing: $box-model;
+}
+
+//Border Radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+  }
+  
+  // Box Shadow
+  @mixin box-shadow($left, $top, $radius, $color) {
+	box-shadow: $left $top $radius $color;
+	    -webkit-box-shadow: $left $top $radius $color;
+	        -moz-box-shadow: $left $top $radius $color;
+}
+
+//Transition
+@mixin transition($property, $duration) {
+	transition: $property $duration;
+	    -webkit-transition: $property $duration;
+	        -moz-transition: $property $duration;
+}
+
+//Transform
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin border-radius-single($topleft, $topright, $bottomright, $bottomleft) {
+	border-top-left-radius: $topleft;
+	border-top-right-radius: $topright;
+	border-bottom-right-radius: $bottomright;
+	border-bottom-left-radius: $bottomleft;
+        -webkit-border-top-left-radius: $topleft;
+        -webkit-border-top-right-radius: $topright;
+        -webkit-border-bottom-right-radius: $bottomright;
+        -webkit-border-bottom-left-radius: $bottomleft;
+            -moz-border-radius-topleft: $topleft;
+            -moz-border-radius-topright: $topright;
+            -moz-border-radius-bottomright: $bottomright;
+            -moz-border-radius-bottomleft: $bottomleft;
+}
+

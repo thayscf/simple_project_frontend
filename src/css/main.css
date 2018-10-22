@@ -1,0 +1,417 @@
+@charset "UTF-8";
+/* Se por acaso você não tiver acostumado a usar o @content, um exemplo de uso:
+
+input,  
+textarea {  
+    @include input-placeholder {
+        color: $grey;
+    }
+} */
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../components/fonts/Montserrat-Light.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  src: url(../../components/fonts/Montserrat-LightItalic.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../components/fonts/Montserrat-Regular.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../components/fonts/Montserrat-Medium.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  src: url(../../components/fonts/Montserrat-MediumItalic.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../../components/fonts/Montserrat-SemiBold.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  src: url(../../components/fonts/Montserrat-SemiBoldItalic.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../components/fonts/Montserrat-Bold.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  src: url(../../components/fonts/Montserrat-SemiBold.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  src: url(../../components/fonts/Montserrat-ExtraBold.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  src: url(../../components/fonts/Montserrat-ExtraBoldItalic.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  src: url(../../components/fonts/Montserrat-Black.ttf); }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  src: url(../../components/fonts/Montserrat-BlackItalic.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url(../../components/fonts/Ubuntu-Light.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  src: url(../../components/fonts/Ubuntu-LightItalic.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../components/fonts/Ubuntu-Regular.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  src: url(../../components/fonts/Ubuntu-Italic.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../components/fonts/Ubuntu-Medium.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  src: url(../../components/fonts/Ubuntu-MediumItalic.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../components/fonts/Ubuntu-Bold.ttf); }
+
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  src: url(../../components/fonts/Ubuntu-BoldItalic.ttf); }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+  background: #f2f2f2; }
+
+a {
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s; }
+
+section {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+.form-control {
+  color: #333333;
+  background-color: #dddddd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  border: 0; }
+  .form-control::placeholder {
+    color: #555555;
+    opacity: 1; }
+  .form-control:disabled, .form-control[readonly] {
+    background-color: #dddddd;
+    opacity: 1; }
+    .form-control:disabled::placeholder, .form-control[readonly]::placeholder {
+      color: #777777;
+      opacity: 1; }
+
+label {
+  font-size: .85em;
+  margin-bottom: 5px; }
+
+.table.section_db_item_table {
+  width: 100%;
+  background-color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif; }
+  .table.section_db_item_table th,
+  .table.section_db_item_table td {
+    vertical-align: middle;
+    line-height: 1.5; }
+  .table.section_db_item_table thead th {
+    font-weight: bold;
+    font-size: 0.8em; }
+  .table.section_db_item_table.table-striped tbody tr:nth-of-type() {
+    background-color: #dddddd; }
+
+header .header_top {
+  height: 35px;
+  background: #0b296c; }
+  header .header_top ul {
+    height: 35px; }
+    header .header_top ul li:last-child {
+      background: #ffffff; }
+      header .header_top ul li:last-child a {
+        color: #0b296c; }
+    header .header_top ul a {
+      padding: .45rem 1rem;
+      line-height: 17px;
+      height: 35px;
+      color: #ffffff;
+      font-size: .8em; }
+      header .header_top ul a:hover, header .header_top ul a:focus {
+        text-decoration: underline; }
+
+header .header_menu {
+  background: #ffffff;
+  min-height: 70px;
+  box-shadow: 1px 2px 4px #d7d7d7;
+  -webkit-box-shadow: 1px 2px 4px #d7d7d7;
+  -moz-box-shadow: 1px 2px 4px #d7d7d7; }
+  @media only screen and (max-width: 575.98px) {
+    header .header_menu {
+      height: auto; } }
+  header .header_menu .navbar-brand {
+    padding: 0;
+    margin-right: 20px; }
+    header .header_menu .navbar-brand img {
+      height: 65px;
+      width: auto;
+      padding: 5px 0; }
+  header .header_menu .navbar {
+    padding-top: 0;
+    padding-bottom: 0; }
+  header .header_menu #navbarNav {
+    height: 70px; }
+    @media only screen and (max-width: 575.98px) {
+      header .header_menu #navbarNav {
+        height: 100%; } }
+    header .header_menu #navbarNav .navbar-nav {
+      height: 100%; }
+      header .header_menu #navbarNav .navbar-nav li {
+        border-left: 1px solid #f2f2f2;
+        line-height: 50px;
+        box-sizing: border-box;
+        height: 70px; }
+        header .header_menu #navbarNav .navbar-nav li:last-child {
+          border-right: 1px solid #f2f2f2; }
+        header .header_menu #navbarNav .navbar-nav li a {
+          height: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+          color: #333333;
+          font-size: 1.1em;
+          font-weight: 300;
+          border-bottom: 2px solid #ffffff;
+          box-sizing: border-box;
+          transition: border-color 1s ease; }
+          header .header_menu #navbarNav .navbar-nav li a:hover, header .header_menu #navbarNav .navbar-nav li a:focus, header .header_menu #navbarNav .navbar-nav li a.active {
+            background: #f2f2f2;
+            border-color: #0b296c; }
+      header .header_menu #navbarNav .navbar-nav .dropdown-toggle i {
+        display: inline-block;
+        position: relative;
+        float: left;
+        font-size: 2.3em;
+        line-height: 50px;
+        margin-right: 10px;
+        color: #0b296c; }
+      header .header_menu #navbarNav .navbar-nav .dropdown-toggle div {
+        display: inline-block;
+        position: relative;
+        float: left;
+        line-height: 35px;
+        margin-right: 10px; }
+        header .header_menu #navbarNav .navbar-nav .dropdown-toggle div span {
+          font-size: .7em;
+          float: left;
+          position: relative;
+          line-height: 3px; }
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav > .nav-item {
+    float: none;
+    margin-left: .1rem; }
+  .navbar .navbar-nav {
+    float: none !important; }
+  .navbar .collapse.in, .navbar .collapsing {
+    clear: both; } }
+
+html {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100%; }
+
+body > main {
+  flex: 1; }
+
+section {
+  border-bottom: 1px solid #dddddd; }
+
+#section_user {
+  padding: 30px 0; }
+  #section_user h1 {
+    text-transform: uppercase;
+    color: #333333;
+    font-size: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 5px; }
+
+#section_dashboard {
+  background: #ffffff; }
+  #section_dashboard .section_db_item {
+    border-right: 1px solid #dddddd;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    display: block;
+    height: auto; }
+    #section_dashboard .section_db_item:last-child {
+      border: 0; }
+    #section_dashboard .section_db_item h2 {
+      text-transform: capitalize;
+      color: #0b296c;
+      font-size: 1.3em; }
+    #section_dashboard .section_db_item_table {
+      position: relative;
+      display: block;
+      margin-top: 30px;
+      background: #f2f2f2;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      padding: 15px 20px; }
+      #section_dashboard .section_db_item_table.table {
+        padding: 0; }
+      #section_dashboard .section_db_item_table h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-family: 'Montserrat', sans-serif; }
+
+.btn {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em; }
+
+.btn-primary {
+  background: #0b296c;
+  border: 0; }
+  .btn-primary:hover, .btn-primary:focus {
+    background: #092055; }
+
+.btn-secondary {
+  border: 0; }
+
+body > footer {
+  padding: 30px 0;
+  background: #0b296c;
+  color: #ffffff;
+  font-size: 0.6em;
+  font-family: 'Montserrat', sans-serif; }
+  body > footer a {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    float: right;
+    margin-right: 15px; }
+    body > footer a:hover {
+      color: #ffffff;
+      text-decoration: underline; }

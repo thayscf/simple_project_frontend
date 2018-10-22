@@ -1,0 +1,23 @@
+.table.section_db_item_table {
+    width: 100%;
+    background-color: $gray-ligthten;
+    font-family: 'Montserrat', sans-serif;
+  
+    th,
+    td {
+        vertical-align: middle;
+        line-height: 1.5;
+    }
+  
+    thead th {
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+
+    &.table-striped {
+        tbody tr:nth-of-type() {
+           background-color: $gray-200;
+        }
+    }
+}
+

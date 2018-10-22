@@ -1,0 +1,142 @@
+header {
+
+    .header_top {
+        $h: 35px;
+        height: $h;
+        background: $dark-blue;
+
+        & ul {
+            height: $h;
+
+            & li:last-child {
+                background: $white;
+
+                & a {
+                    color: $dark-blue;
+                }
+            }
+
+            & a {
+                padding: .45rem 1rem;
+                line-height: 17px;
+                height: $h;
+                color: $white;
+                font-size: .8em;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .header_menu {
+        background: $white;
+        $h: 70px;
+        min-height: $h;
+        @include box-shadow(1px, 2px, 4px, $gray-300);
+        @include mq('Extra-small') {
+            height: auto;
+        }
+
+        .navbar-brand {
+            padding: 0;
+            margin-right: 20px;
+
+            & img {
+                height: 65px;
+                width: auto;
+                padding: 5px 0;
+            }
+        }
+
+        & .navbar {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #navbarNav {
+            height: $h;
+            @include mq('Extra-small') {
+                height: 100%;
+            }
+
+            .navbar-nav {
+                height: 100%;
+
+                & li {
+                    border-left: 1px solid $gray-ligthten;
+                    line-height: 50px;
+                    box-sizing: border-box;
+                    height: $h;
+
+                    &:last-child {
+                        border-right: 1px solid $gray-ligthten;
+                    }
+
+                    & a {
+                        height: 100%;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        color: $gray;
+                        font-size: 1.1em;
+                        font-weight: 300;
+                        border-bottom: 2px solid $white;
+                        box-sizing: border-box;
+                        transition: border-color 1s ease;
+
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            background: $gray-ligthten;
+                            border-color: $dark-blue;
+                        }
+                    }
+                }
+
+                .dropdown-toggle {
+                    & i {
+                        display: inline-block;
+                        position: relative;
+                        float: left;
+                        font-size: 2.3em;
+                        line-height: 50px;
+                        margin-right: 10px;
+                        color: $dark-blue;
+                    }
+
+                    & div {
+                        display: inline-block;
+                        position: relative;
+                        float: left;
+                        line-height: 35px;
+                        margin-right: 10px;
+
+                        & span {
+                            font-size: .7em;
+                            float: left;
+                            position: relative;
+                            line-height: 3px;
+                        }
+                    }
+                }
+            }
+
+        }
+        
+    }
+}
+
+@media(max-width:768px) {
+    .navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    .navbar .navbar-nav {
+        float:none !important;
+    }
+    .navbar .collapse.in, .navbar .collapsing  {
+        clear:both;
+    }
+}

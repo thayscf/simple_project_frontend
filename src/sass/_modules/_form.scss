@@ -1,0 +1,37 @@
+.form-control {
+    color: $gray;
+    background-color: $gray-200;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    border: 0;
+
+    // Placeholder
+    &::placeholder {
+        color: $gray-500;
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1;
+    }
+
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled,
+    &[readonly] {
+        background-color: $gray-200;
+        // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+        opacity: 1;
+
+        &::placeholder {
+            color: $gray-600;
+            // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+            opacity: 1;
+        }
+    }
+}
+
+label {
+    font-size: .85em;
+    margin-bottom: 5px;
+}
