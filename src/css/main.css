@@ -262,25 +262,14 @@ header .header_menu {
   @media only screen and (max-width: 575.98px) {
     header .header_menu {
       min-height: 70px; } }
-  header .header_menu .navbar-brand {
-    padding: 0;
-    margin-right: 20px; }
-    header .header_menu .navbar-brand img {
-      height: 65px;
-      width: auto;
-      padding: 5px 0; }
-  header .header_menu .navbar {
-    padding-top: 0;
-    padding-bottom: 0; }
   header .header_menu #navbarNav {
     min-height: 70px; }
     @media only screen and (max-width: 767.98px) {
-      header .header_menu #navbarNav {
+      header .header_menu #navbarNav.navbar-collapse.collapse-in {
         height: auto !important;
-        display: block;
-        border: 1px solid red; } }
+        display: block; } }
     @media only screen and (max-width: 575.98px) {
-      header .header_menu #navbarNav {
+      header .header_menu #navbarNav.navbar-collapse.collapse-in {
         min-height: 70px; } }
     header .header_menu #navbarNav .navbar-nav {
       min-height: 100%; }
@@ -324,6 +313,16 @@ header .header_menu {
           float: left;
           position: relative;
           line-height: 3px; }
+  header .header_menu .navbar-brand {
+    padding: 0;
+    margin-right: 20px; }
+    header .header_menu .navbar-brand img {
+      height: 65px;
+      width: auto;
+      padding: 5px 0; }
+  header .header_menu .navbar {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 html {
   height: 100%;

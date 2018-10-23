@@ -1,6 +1,8 @@
 var gulp    = require ('gulp')
     , sass  = require ('gulp-sass')
-    , clean = require ('gulp-clean'),
+    , clean = require ('gulp-clean')
+    , postcss = require('gulp-postcss')
+    , uncss = require('uncss'),
     browserSync = require('browser-sync');
 
 gulp.task('clean', function(){
@@ -29,7 +31,13 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./dist/css/')); 
 })
 
-gulp.task('server', function(){
+gulp.task('postcss', function(){
+    return gulp.src('./dist/components/**/*.css')
+        .pipe(postcss([ require('postcss-uncss')({html: ['./dist/*.html']}) ]) )
+        .pipe(gulp.dest('./dist/components/'))
+})
+
+gulp.task('server', ['postcss'], function(){
     browserSync.init({
         server: {
             baseDir: 'dist'

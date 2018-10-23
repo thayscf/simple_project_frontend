@@ -262,25 +262,14 @@ header .header_menu {
   @media only screen and (max-width: 575.98px) {
     header .header_menu {
       min-height: 70px; } }
-  header .header_menu .navbar-brand {
-    padding: 0;
-    margin-right: 20px; }
-    header .header_menu .navbar-brand img {
-      height: 65px;
-      width: auto;
-      padding: 5px 0; }
-  header .header_menu .navbar {
-    padding-top: 0;
-    padding-bottom: 0; }
   header .header_menu #navbarNav {
     min-height: 70px; }
     @media only screen and (max-width: 767.98px) {
-      header .header_menu #navbarNav {
+      header .header_menu #navbarNav.navbar-collapse.collapse-in {
         height: auto !important;
-        display: block;
-        border: 1px solid red; } }
+        display: block; } }
     @media only screen and (max-width: 575.98px) {
-      header .header_menu #navbarNav {
+      header .header_menu #navbarNav.navbar-collapse.collapse-in {
         min-height: 70px; } }
     header .header_menu #navbarNav .navbar-nav {
       min-height: 100%; }
@@ -324,6 +313,16 @@ header .header_menu {
           float: left;
           position: relative;
           line-height: 3px; }
+  header .header_menu .navbar-brand {
+    padding: 0;
+    margin-right: 20px; }
+    header .header_menu .navbar-brand img {
+      height: 65px;
+      width: auto;
+      padding: 5px 0; }
+  header .header_menu .navbar {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 html {
   height: 100%;
@@ -370,8 +369,6 @@ section {
       color: #0b296c;
       font-size: 1.3em; }
     #section_dashboard .section_db_item_table {
-      position: relative;
-      display: block;
       margin-top: 30px;
       background: #f2f2f2;
       -webkit-border-radius: 5px;
@@ -380,7 +377,12 @@ section {
       /* stops bg color from leaking outside the border: */
       padding: 15px 20px; }
       #section_dashboard .section_db_item_table.table {
-        padding: 0; }
+        padding: 0;
+        width: 100%; }
+        #section_dashboard .section_db_item_table.table thead,
+        #section_dashboard .section_db_item_table.table tbody,
+        #section_dashboard .section_db_item_table.table tr {
+          width: 100%; }
       #section_dashboard .section_db_item_table h3 {
         font-size: 2em;
         margin-bottom: 20px;
